@@ -91,6 +91,7 @@ ul > li:nth-child(odd) {
 }
 
 .submit-btn {
+  display: flex;
   width: 30%;
   padding: 10px 28px;
   align-self: center;
