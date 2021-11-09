@@ -1,13 +1,13 @@
 /* eslint-disable linebreak-style */
-const scoreList = [
-  { name: 'Eva', score: 85 },
-  { name: 'Ada', score: 92 },
-  { name: 'Jim', score: 100 },
-  { name: 'Ana', score: 75 },
-  { name: 'Rob', score: 79 },
-];
+// const scoreList = [
+//   { name: 'Eva', score: 85 },
+//   { name: 'Ada', score: 92 },
+//   { name: 'Jim', score: 100 },
+//   { name: 'Ana', score: 75 },
+//   { name: 'Rob', score: 79 },
+// ];
 
-const updateList = (list, listContainer) => {
+export default function updateList(list, listContainer) {
   let scoreBoardContainer = '';
   list.forEach((element) => {
     const { name, score } = element;
@@ -16,6 +16,6 @@ const updateList = (list, listContainer) => {
       </li>`;
   });
   listContainer.innerHTML = scoreBoardContainer;
-};
+}
 
-export { scoreList, updateList };
+// export { updateList };
