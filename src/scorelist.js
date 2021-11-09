@@ -17,5 +17,3 @@ export default function updateList(list, listContainer) {
   });
   listContainer.innerHTML = scoreBoardContainer;
 }
-
-// export { updateList };

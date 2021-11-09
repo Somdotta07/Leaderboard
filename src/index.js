@@ -6,7 +6,7 @@ import { getScore, postScore } from './generate_api.js';
 const scoreBoard = document.getElementById('scoreboard');
 const refreshBtn = document.getElementById('refresh-btn');
 const submitForm = document.querySelector('.input-score');
-const userName = document.getElementById('name');
+const player = document.getElementById('name');
 const score = document.getElementById('score');
 
 async function updateScore() {
@@ -16,19 +16,20 @@ async function updateScore() {
 }
 
 refreshBtn.addEventListener('click', async () => {
+  scoreBoard.innerHTML = '';
   await updateScore();
 });
 
 submitForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const playerName = userName.value;
+  const playerName = player.value;
   const playerScore = score.value;
   await postScore({ playerName, playerScore });
-  userName.value = '';
+  player.value = '';
   score.value = '';
   await updateScore();
 });
 
-window.onload = async () => {
-  await updateScore();
-};
+// window.onload = async () => {
+//   await updateScore();
+// };
