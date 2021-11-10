@@ -29,7 +29,3 @@ submitForm.addEventListener('submit', async (e) => {
   player.value = '';
   score.value = '';
 });
-
-window.onload = async () => {
-  await updateScore();
-};
