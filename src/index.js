@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import './style.css';
 import updateList from './scorelist.js';
 import { getScore, postScore } from './generate_api.js';

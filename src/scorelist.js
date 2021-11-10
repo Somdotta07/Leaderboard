@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 export default function updateList(result) {
   const scoreBoard = document.getElementById('scoreboard');
   let scoreBoardContainer = '';
