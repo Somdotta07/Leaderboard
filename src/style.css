@@ -12,12 +12,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 40px;
+  background-color: rgb(196, 245, 105, 0.4);
 }
 
 input,
 input::placeholder {
   font-size: 20px;
   padding: 10px;
+  font-style: italic;
 }
 
 .main-container {
@@ -26,6 +28,14 @@ input::placeholder {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin: 30px;
+  background: url('./bgimg.jpg') no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  transition: width 2s;
+}
+
+.main-container:hover {
+  width: 900px;
 }
 
 .main-container section {
@@ -43,10 +53,17 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   gap: 60px;
+  font-size: 22px;
+  transition: width 2s;
+}
+
+.heading h2 {
+  text-shadow: 1px 1px 2px red, 0 0 1em rgba(0, 140, 255, 0.479), 0 0 0.2em rgb(179, 255, 0);
+  background-color: rgb(247, 212, 212, 0.7);
 }
 
 .scoreboard {
-  border: 3px solid black;
+  border: 3px solid rgb(196, 37, 37);
   margin: 20px 0;
   width: 70%;
 }
@@ -55,12 +72,23 @@ input::placeholder {
   padding: 10px;
 }
 
+.scoreboard li p {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+}
+
 ul > li:nth-child(odd) {
-  background-color: rgb(216, 215, 213);
+  background-color: rgb(230, 198, 136);
+}
+
+ul > li:nth-child(even) {
+  background-color: rgb(247, 245, 242);
 }
 
 .input-heading {
   margin: 20px;
+  color: yellow;
 }
 
 .input-score {
@@ -78,7 +106,7 @@ ul > li:nth-child(odd) {
 }
 
 .btn {
-  background-color: #fff;
+  background-color: yellow;
   border: 2px solid #000;
   color: #000;
   padding: 10px 36px;
