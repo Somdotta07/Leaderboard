@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 const gameScoreUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Qc8Crttfp6u4HrkOhxwH/scores';
 const userName = document.getElementById('name');
 const score = document.getElementById('score');
