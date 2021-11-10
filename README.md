@@ -1,61 +1,79 @@
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Leaderboard
 
 
-A JavaScript project for the Leaderboard list app, using webpack and ES6 features
+A JavaScript project for the Leaderboard list app, using webpack and ES6 features.The leaderboard website displays scores submitted by different players. It also allows us to submit our score. All data is preserved thanks to the external Leaderboard API service.
 
-![screenshot](./app_screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/84907743/141096547-3f663750-416c-411c-b6f4-2c6c65327fe0.png)
 
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JS
+- WEBPACK
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Link]( https://somdotta07.github.io/Leaderboard/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**To clone this project**
+**Run command: $git clone  https://github.com/Somdotta07/Leaderboard.git**
+**or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 
 
-To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+
+
+
+## Prerequisites
+
+- Code editor (VS Code, Sublime, Atom)
 
 ### Setup
+- Set up a new project with webpack 
+#### Install Webpack
+- Follow the instructions from the [getting started](https://webpack.js.org/guides/getting-started/#basic-setup) guide to set up the basics. Implement all the steps from *Basic Setup* to *NPM Scripts*.
+- The next step is to add html file :
+    Follow the instructions from the [setting up HtmlWebpackPlugin](https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin) guide
+Then
+```
+npm run build
+```
+- Create a **/src/index.html** for writing the project
 
-### Install
+- Then modify **webpack.config.js** to point HtmlWebpackPlugin towards your template file:
+```javascript
+plugins: [
+  new HtmlWebpackPlugin({
+-   title: 'Output Management',
++   template: './src/index.html'
+  }),
+],
+```
+- Run `npm run build` to update the **/dist/index.html**.
+- Then it is time to add some style to the project:
+Follow the steps in [loading CSS](https://webpack.js.org/guides/asset-management/#loading-css) guide.
+Next, execute `npm run build` and check if the HTML body style has changed.
+#### Setup local dev server
+- Finally,follow the [using webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server) guide and set it up on your local machine.
 
-### Usage
-
-### Run tests
-
-### Deployment
 
 
 
 ## Authors
 
-👤 **Author1**
+:woman: Somdotta Sarkar
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [Github](https://github.com/Somdotta07)
+- [Twitter](https://github.com/Somdotta07)
+- [LinkedIn](https://www.linkedin.com/in/somdotta-sarkar-8849b419/)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
