@@ -12,7 +12,8 @@ const score = document.getElementById('score');
 async function updateScore() {
   const fetchAPI = await getScore();
   const updatedList = fetchAPI.result;
-  updateList(updatedList, scoreBoard);
+  updatedList.sort((a, b) => a.score - b.score);
+  updateList(updatedList);
 }
 
 refreshBtn.addEventListener('click', async () => {
@@ -20,16 +21,15 @@ refreshBtn.addEventListener('click', async () => {
   await updateScore();
 });
 
-submitForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+submitForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
   const playerName = player.value;
   const playerScore = score.value;
   await postScore({ playerName, playerScore });
   player.value = '';
   score.value = '';
-  await updateScore();
 });
 
-// window.onload = async () => {
-//   await updateScore();
-// };
+window.onload = async () => {
+  await updateScore();
+};
