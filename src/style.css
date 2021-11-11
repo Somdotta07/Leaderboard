@@ -12,8 +12,30 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   padding: 40px;
-  background-color: rgb(196, 245, 105, 0.4);
 }
+
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, rgb(225, 241, 134) 50%, rgb(147, 113, 241) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse; 
+  animation-duration:5s;
+}
+
+.bg3 {
+  animation-duration:7s;
+}
+
 
 input,
 input::placeholder {
@@ -25,12 +47,16 @@ input::placeholder {
 .main-container {
   width: 90%;
   display: grid;
+  position:fixed;
   grid-template-columns: 1fr 1fr;
+  left:50%;
+  top:50%;
   gap: 10px;
   margin: 30px;
   background: url('./bgimg.jpg') no-repeat;
   background-size: cover;
   opacity: 0.8;
+  transform:translate(-50%, -50%);
   transition: width 2s;
 }
 
@@ -40,7 +66,7 @@ input::placeholder {
 
 .main-container section {
   padding: 30px 2px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .left {
@@ -49,23 +75,32 @@ input::placeholder {
   flex-direction: column;
 }
 
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
 .heading {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 50px;
+  margin: 20px;
   font-size: 22px;
   transition: width 2s;
 }
 
 .heading h2 {
-  text-shadow: 1px 1px 2px red, 0 0 1em rgba(0, 140, 255, 0.479), 0 0 0.2em rgb(179, 255, 0);
-  background-color: rgb(247, 212, 212, 0.7);
+  text-shadow: 1px 1px 2px rgb(238, 255, 0), 0 0 1em rgba(255, 0, 234, 0.479), 0 0 0.2em rgb(179, 255, 0);
+  background-color: rgb(247, 212, 212, 0.5);
+  line-height: 60px;
+  margin-top: 10px;
 }
 
 .scoreboard {
   border: 3px solid rgb(196, 37, 37);
-  margin: 20px 0;
-  width: 70%;
+  margin: 20px;
+  width: 90%;
 }
 
 .scoreboard li {
@@ -87,15 +122,17 @@ ul > li:nth-child(even) {
 }
 
 .input-heading {
+  display: flex;
   margin: 20px;
   color: yellow;
 }
 
 .input-score {
-  width: 60%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin: 20px;
+  margin-top: 40px;
   gap: 32px;
 }
 
@@ -118,9 +155,21 @@ ul > li:nth-child(even) {
   font-weight: 600;
 }
 
+.refresh-btn {
+  padding: 12px 24px;
+  margin: 20px;
+}
 .submit-btn {
   display: flex;
-  width: 30%;
-  padding: 10px 28px;
+  text-align: center;
   align-self: center;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
