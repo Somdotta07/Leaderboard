@@ -14,28 +14,26 @@ body {
   padding: 40px;
 }
 
-
 .bg {
-  animation:slide 3s ease-in-out infinite alternate;
+  animation: slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-20deg, rgb(225, 241, 134) 50%, rgb(147, 113, 241) 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
 }
 
 .bg2 {
-  animation-direction: alternate-reverse; 
-  animation-duration:5s;
+  animation-direction: alternate-reverse;
+  animation-duration: 5s;
 }
 
 .bg3 {
-  animation-duration:7s;
+  animation-duration: 7s;
 }
-
 
 input,
 input::placeholder {
@@ -47,16 +45,16 @@ input::placeholder {
 .main-container {
   width: 90%;
   display: grid;
-  position:fixed;
+  position: fixed;
   grid-template-columns: 1fr 1fr;
-  left:50%;
-  top:50%;
+  left: 50%;
+  top: 50%;
   gap: 10px;
   margin: 30px;
   background: url('./bgimg.jpg') no-repeat;
   background-size: cover;
   opacity: 0.8;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   transition: width 2s;
 }
 
@@ -66,6 +64,7 @@ input::placeholder {
 
 .main-container section {
   padding: 30px 2px;
+
   /* align-items: center; */
 }
 
@@ -84,6 +83,7 @@ input::placeholder {
 .heading {
   display: flex;
   flex-direction: row;
+
   /* gap: 150px; */
   margin: 20px;
   margin-left: 40px;
@@ -162,7 +162,6 @@ ul > li:nth-child(even) {
   margin-left: 200px;
 }
 
-
 .submit-btn {
   display: flex;
   text-align: center;
@@ -171,9 +170,10 @@ ul > li:nth-child(even) {
 
 @keyframes slide {
   0% {
-    transform:translateX(-25%);
+    transform: translateX(-25%);
   }
+
   100% {
-    transform:translateX(25%);
+    transform: translateX(25%);
   }
 }
